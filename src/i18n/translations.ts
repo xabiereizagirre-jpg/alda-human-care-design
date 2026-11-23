@@ -325,7 +325,7 @@ const eu: Translations = {
     sloganChange: "Eraldatzen dugu",
     sloganYou: "Zuretzat",
     introBefore: "",
-    introHighlight: "Osasun, gizarte eta gizarte-osasun",
+    introHighlight: "Osasun, gizarte eta soziosanitario",
     introAfter: " arloetan espezializatutako aholkularitza estrategikoko eta zerbitzu-diseinuko agentzia",
     quote: "\"Aldaketa zurekin diseinatzen dugu, estrategiatik eta enpatiatik abiatuta.\"",
     cta: "Ezagutu nola eraldatzen dugun",
@@ -333,20 +333,20 @@ const eu: Translations = {
   about: {
     title: "Nor gara",
     intro:
-      "Diziplina anitzeko taldea gara, ikuspegi integrala eta gizarte-osasun arloan esperientzia zabala dituena. Diseinu estrategikoa, berrikuntza teknologikoa eta giza sentsibilitatea uztartzen ditugu, erakundeei beren eraldaketa- eta etengabeko hobekuntza-prozesuetan laguntzeko.",
+      "Diziplina anitzeko taldea gara, ikuspegi integrala eta eremu soziosanitarioan esperientzia zabala dituena. Diseinu estrategikoa, berrikuntza teknologikoa eta giza sentsibilitatea uztartzen ditugu, erakundeei beren eraldaketa- eta etengabeko hobekuntza-prozesuetan laguntzeko.",
     timelineTitle: "Gure ibilbidea",
     milestones: [
       { year: "2013", event: "ALDA2U sortu zen" },
-      { year: "2019", event: "Osasun, gizarte eta gizarte-osasun arloetan espezializatutako aholkularitza estrategikoan eta zerbitzu-diseinuan hasi ginen" },
-      { year: "2020", event: "Gizarte-osasun arloko zerbitzuak diseinatzeko metodologia propioa garatu genuen" },
-      { year: "2021", event: "Sektore publikoko estrategiak diseinatzen eta laguntzen hasi ginen, gizarte- eta gizarte-osasun arretako sistemen esparruan" },
+      { year: "2019", event: "Osasun, gizarte eta soziosanitario arloetan espezializatutako aholkularitza estrategikoan eta zerbitzu-diseinuan hasi ginen" },
+      { year: "2020", event: "Arlo soziosanitarioko zerbitzuak diseinatzeko metodologia propioa garatu genuen" },
+      { year: "2021", event: "Sektore publikoko estrategiak diseinatzen eta laguntzen hasi ginen, gizarte- eta soziosanitario-aretako sistemen esparruan" },
       { year: "2022", event: "% 100 online enpresa gara" },
       { year: "2024", event: "Hirugarrenekin lankidetza-akordioetan ere lanean hasi ginen" },
-      { year: "2025", event: "Gizarte-osasun elkarreragingarritasunean espezializatu gara" },
+      { year: "2025", event: "Elkarreragingarritasun soziosanitarioan espezializatu gara" },
     ],
     valuesTitle: "Gure balioak",
     values: [
-      { title: "Konpromisoa eta pertsonalizazioa", description: "Proiektu bakoitza bakarra da, eta erakundearen behar zehatzak islatuko dituen arreta pertsonalizatua merezi du." },
+      { title: "Konpromisoa eta pertsonalizazioa", description: "Proiektu bakoitza bakarra da, eta erakundearen behar zehatzak islatuko dituen arreta pertsonalizatua eskatzen du." },
       { title: "Benetako lankidetza", description: "Gure bezeroekin batera lan egiten dugu, elkarrekiko konfiantzan oinarritutako aliantza iraunkorrak sortuz." },
       { title: "Loturaren zaintza", description: "Giza harremanak eta prozesuan parte hartzen duten pertsona guztien ongizatea lehenesten ditugu." },
       { title: "Diskrezioa eta errespetua", description: "Konfidentzialtasun osoa eta errespetua gordetzen ditugu gure bezeroen informazioarekiko eta prozesuekiko." },
@@ -355,10 +355,10 @@ const eu: Translations = {
     ],
     teamTitle: "Gure taldea",
     teamIntro:
-      "alda2u-n uste dugu balioa ez dagoela karguetan ezta hierarkietan, jokoan jartzen ditugun gaitasunen aniztasunean baizik. Diziplinarteko taldea gara: eraldaketa-prozesuak pentsatu, diseinatu eta laguntzen ditugu, sektorearen ezagutza, teknologia eta diseinu estrategikoa uztartuz.",
+      "Alda2u-n uste dugu balioa ez dagoela karguetan ezta hierarkietan, jokoan jartzen ditugun gaitasunen aniztasunean baizik. Diziplinarteko taldea gara: eraldaketa-prozesuak pentsatu, diseinatu eta laguntzen ditugu, sektorearen ezagutza, teknologia eta diseinu estrategikoa uztartuz.",
     teamRoles: [
       {
-        title: "Gizarte-osasun, gizarte eta osasun arloko adituak",
+        title: "Soziosanitario, gizarte eta osasun arloko adituak",
         points: [
           "Arreta-zerbitzuen sistemak, politikak eta errealitateak sakon ezagutzen dituzte.",
           "Esperientzia aplikatua eta ikuspegi estrategikoa ekartzen dituzte, proposamen errealistak eta eragin handikoak diseinatzeko.",
@@ -383,7 +383,7 @@ const eu: Translations = {
   services: {
     title: "Zer egiten dugu",
     intro:
-      "Pertsonengan oinarritutako diseinu estrategikoa aplikatzen dugu, zentzuzko teknologiarekin uztartuta, gizarte-osasun sektoreko erakundeak benetan eraldatuko dituzten irtenbideak sortzeko.",
+      "Pertsonengan oinarritutako diseinu estrategikoa aplikatzen dugu, zentzuzko teknologiarekin uztartuta, sektore soziosanitarioko erakundeak benetan eraldatuko dituzten irtenbideak sortzeko.",
     areasTitle: "Gure 4 jarduera-arloak",
     areas: [
       { title: "Antolaketa", description: "Antolaketa-egiturak eta -prozesuak birdiseinatzea, funtzionamendua eta eraginkortasuna hobetzeko." },
@@ -396,7 +396,7 @@ const eu: Translations = {
     a2uTitle: "A2U metodologia",
     a2uBefore: "Gure metodologia propioa ",
     a2uHighlight: "Human-Centered Design",
-    a2uAfter: " ikuspegian oinarritzen da, eta berariaz gizarte-osasun arlora aplikatzen dugu, sektore honen berezitasun eta beharretara egokituta.",
+    a2uAfter: " ikuspegian oinarritzen da, eta berariaz arlo soziosanitariora aplikatzen dugu, sektore honen berezitasun eta beharretara egokituta.",
     a2uPillarsText:
       "Lau oinarri nagusitatik abiatuta lan egiten dugu; horiek gidatzen dute gure metodologia eta zehazten dute antolaketa-eraldaketa ulertzeko dugun modua.",
     pillars: [
@@ -407,11 +407,11 @@ const eu: Translations = {
     ],
     keyServicesTitle: "Zerbitzu nagusiak",
     keyServices: [
-      { title: "Zerbitzu-diseinua", description: "Pertsonengan oinarritutako eta gizarte-osasun testuingurura egokitutako zerbitzuak sortzea." },
+      { title: "Zerbitzu-diseinua", description: "Pertsonengan oinarritutako eta testuinguru soziosanitariora egokitutako zerbitzuak sortzea." },
       { title: "Berrikuntza eta aldaketaren kudeaketa", description: "Eraldaketa-prozesuetan eta berrikuntzen ezarpenean laguntzea." },
-      { title: "Negozio-aholkularitza", description: "Gizarte-osasun sektoreko erakundeen garapen eta hazkunde jasangarrirako aholkularitza estrategikoa." },
-      { title: "Bulego teknikoa", description: "Gizarte-osasun arloko proiektu konplexuetarako laguntza tekniko espezializatua." },
-      { title: "Gizarte-osasun elkarreragingarritasuna", description: "Sistemen eta erakundeen arteko integrazio, koordinazio eta komunikaziorako irtenbideak." },
+      { title: "Negozio-aholkularitza", description: "Sektore soziosanitarioko erakundeen garapen eta hazkunde jasangarrirako aholkularitza estrategikoa." },
+      { title: "Bulego teknikoa", description: "Arlo soziosanitarioko proiektu konplexuetarako laguntza tekniko espezializatua." },
+      { title: "Elkarreragingarritasun soziosanitarioa", description: "Sistemen eta erakundeen arteko integrazio, koordinazio eta komunikaziorako irtenbideak." },
       { title: "Aholkularitza teknologikoa", description: "Teknologiaren erabileran aholkatu eta laguntzen dugu, bezeroaren eta/edo proiektuaren beharren arabera." },
     ],
     philosophy:
@@ -460,11 +460,11 @@ const eu: Translations = {
         ourContribution: "Zerbitzu publiko gizatiarragoa eta eraginkorragoa",
       },
       {
-        name: "Gizarte-osasun Elkarreragingarritasunerako Bulego Teknikoa",
+        name: "Elkarreragingarritasun Soziosanitariorako Bulego Teknikoa",
         sector: "Sektore publikoa",
         intervention: "Koordinazio tekniko estrategikoa",
-        whatWeDid: "Gizarte-osasun elkarreragingarritasunaren garapenean eta sendotzean laguntzen dugu: etikari buruzko txostenak koordinatzen, eskualdeko estrategiak babesten, atariak eta kasu-kudeatzaileak diseinatzen eta sektoreko topaketak antolatzen.",
-        ourContribution: "Gizarte-osasun ekosistema indartzen duen metodologia eta koordinazioa",
+        whatWeDid: "Elkarreragingarritasun soziosanitarioaren garapenean eta sendotzean laguntzen dugu: etikari buruzko txostenak koordinatzen, eskualdeko estrategiak babesten, atariak eta kasu-kudeatzaileak diseinatzen eta sektoreko topaketak antolatzen.",
+        ourContribution: "Ekosistema soziosanitarioa indartzen duen metodologia eta koordinazioa",
       },
       {
         name: "Cohousing proiektua",
@@ -474,7 +474,7 @@ const eu: Translations = {
         ourContribution: "Komunitate-bizitza indartzen duen teknologia gizatiartua",
       },
       {
-        name: "Gizarte-osasun ekitaldien antolaketa",
+        name: "Soziosanitario-ekitaldien antolaketa",
         sector: "Sektore publikoa",
         intervention: "Ekitaldien antolaketa eta ekoizpena",
         whatWeDid: "Ekitaldiaren egituraketan eta beharrezko materialaren sorkuntzan laguntzen dugu (gidoiak, sustapen-materiala, komunikazioen kudeaketa, etab.).",
@@ -484,7 +484,7 @@ const eu: Translations = {
         name: "Gizarte-osasun produktu digitalen diseinua",
         sector: "Sektore publikoa",
         intervention: "Garapenaren diseinua eta gainbegiratzea",
-        whatWeDid: "Komunitatearen eta/edo bezeroaren beharrak identifikatzeaz arduratzen gara, eta gizarte-osasun atariaren eta haren komunitate-eremuaren moduko produktuen diseinua eta garapena gainbegiratzen ditugu, erabiltzaile-esperientzia egokia bermatzeko.",
+        whatWeDid: "Komunitatearen eta/edo bezeroaren beharrak identifikatzeaz arduratzen gara, eta soziosanitario-atariaren eta haren komunitate-eremuaren moduko produktuen diseinua eta garapena gainbegiratzen ditugu, erabiltzaile-esperientzia egokia bermatzeko.",
         ourContribution: "Zerbitzuak eta komunitatea lotzen dituzten produktu digitalak, erabiltzailean oinarrituak",
       },
     ],
@@ -493,7 +493,7 @@ const eu: Translations = {
     title: "Kontaktua",
     imagineTitle: "Zer irudika dezakegu elkarrekin?",
     imagineText:
-      "Erronka bakoitza bakarra da eta berariazko hurbilketa behar du. Azter ditzagun zure esperientzia eta gure metodologia uztartzean zabaltzen diren aukerak.",
+      "Erronka bakoitza bakarra da, eta hurbilketa espezifikoa eskatzen du. Azter ditzagun zure esperientzia eta gure metodologia uztartzean sortzen diren aukerak.",
     formTitle: "Bidali iezaguzu mezu bat",
     nameLabel: "Izena *",
     namePlaceholder: "Zure izena",
