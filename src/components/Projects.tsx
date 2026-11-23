@@ -1,83 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Stethoscope, Heart, Users, Phone, Building, Palette, Cog, Lightbulb, Target, Zap, Home, Calendar, Monitor } from "lucide-react";
+import { Stethoscope, Heart, Users, Phone, Building, Zap, Home, Calendar, Monitor } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
+
+const projectIcons = [Stethoscope, Heart, Users, Building, Phone, Zap, Home, Calendar, Monitor];
 
 const Projects = () => {
-  const projects = [
-    {
-      icon: Stethoscope,
-      name: "Nerea Care",
-      sector: "Empresas de cuidados - Atención domiciliaria",
-      intervention: "Diseño de servicio digital",
-      whatWeDid: "Diseñamos una plataforma integral que digitaliza y optimiza procesos asistenciales, centrándose en la experiencia tanto de profesionales como de pacientes.",
-      ourContribution: "Transformación digital que humaniza la tecnología en el cuidado"
-    },
-    {
-      icon: Heart,
-      name: "CARE2U",
-      sector: "Empresas de cuidados - Atención domiciliaria",
-      intervention: "Acompañamiento estratégico de interoperabilidad",
-      whatWeDid: "Facilitamos la creación de un ecosistema de interoperabilidad entre servicios sociales y sanitarios, mejorando la coordinación y continuidad asistencial.",
-      ourContribution: "Puente tecnológico que conecta cuidados fragmentados"
-    },
-    {
-      icon: Users,
-      name: "Elkar Bizitu",
-      sector: "Participación ciudadana",
-      intervention: "Metodología participativa",
-      whatWeDid: "Desarrollamos una metodología que pone a las personas en situación vulnerable en el centro del diseño de servicios sociales, potenciando su participación activa.",
-      ourContribution: "Empoderamiento real de personas usuarias como co-creadoras"
-    },
-    {
-      icon: Building,
-      name: "Helduak Zabaltzen",
-      sector: "Centros de mayores - Entorno comunitario",
-      intervention: "Innovación social comunitaria",
-      whatWeDid: "Creamos una red de apoyo comunitario que integra herramientas digitales adaptadas para promover el envejecimiento activo en entornos rurales.",
-      ourContribution: "Fortalecimiento de vínculos que trasciende lo digital"
-    },
-    {
-      icon: Phone,
-      name: "Proyecto de Teleasistencia",
-      sector: "Sector público",
-      intervention: "Rediseño de servicio público",
-      whatWeDid: "Lideramos la modernización integral del servicio de teleasistencia regional, aplicando un enfoque centrado en el usuario y optimizando procesos operativos.",
-      ourContribution: "Servicio público más humano y eficiente"
-    },
-    {
-      icon: Zap,
-      name: "Oficina Técnica para la Interoperabilidad Sociosanitaria",
-      sector: "Sector público",
-      intervention: "Coordinación técnica estratégica",
-      whatWeDid: "Acompañamos el desarrollo y consolidación de la interoperabilidad sociosanitaria, coordinando informes de ética, apoyando estrategias regionales, diseñando portales y gestores de casos, y organizando encuentros del sector.",
-      ourContribution: "Metodología y coordinación que fortalece el ecosistema sociosanitario"
-    },
-    {
-      icon: Home,
-      name: "Proyecto de Cohousing",
-      sector: "Vivienda colaborativa",
-      intervention: "Integración tecnológica",
-      whatWeDid: "Diseño de la incorporación de tecnología para el bienestar en espacios convivenciales.",
-      ourContribution: "Tecnología humanizada que potencia la vida comunitaria"
-    },
-    {
-      icon: Calendar,
-      name: "Organización de eventos sociosanitarios",
-      sector: "Sector público",
-      intervention: "Organización y producción de eventos",
-      whatWeDid: "Apoyamos en la estructuración del evento, creación del material necesario (guiones, material de promoción, gestión de comunicaciones, etc.).",
-      ourContribution: "Gestión integral que facilita encuentros significativos del sector"
-    },
-    {
-      icon: Monitor,
-      name: "Diseño de productos digitales sociosanitarios",
-      sector: "Sector público",
-      intervention: "Diseño y supervisión de desarrollo",
-      whatWeDid: "Somos responsables de identificar necesidades de la comunidad y/o cliente, y supervisamos el diseño y desarrollo de productos como el portal sociosanitario y su área comunitaria para asegurar una adecuada experiencia de usuario.",
-      ourContribution: "Productos digitales centrados en el usuario que conectan servicios y comunidad"
-    }
-  ];
+  const { t } = useLanguage();
+  const projects = t.projects.items.map((item, index) => ({ ...item, icon: projectIcons[index] }));
 
   return (
     <div className="pb-20 bg-muted/20">
@@ -85,11 +16,10 @@ const Projects = () => {
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
           <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8">
-            Proyectos
+            {t.projects.title}
           </h3>
           <p className="text-lg md:text-xl text-foreground leading-relaxed">
-            Cada proyecto es una muestra de lo que somos capaces de imaginar, facilitar, diseñar y acompañar. 
-            Estas experiencias reflejan nuestro enfoque y metodología en acción.
+            {t.projects.intro}
           </p>
         </div>
 
@@ -127,13 +57,13 @@ const Projects = () => {
 
                     <CardContent className="space-y-4">
                       <div>
-                        <h4 className="font-semibold text-primary mb-2 text-sm">Qué hicimos</h4>
+                        <h4 className="font-semibold text-primary mb-2 text-sm">{t.projects.whatWeDid}</h4>
                         <p className="text-muted-foreground leading-relaxed text-sm">{project.whatWeDid}</p>
                       </div>
 
                       {project.ourContribution && (
                         <div className="bg-accent/5 border-l-3 border-accent p-3 rounded-r-lg">
-                          <h4 className="font-semibold text-accent mb-1 text-xs">Nuestra aportación</h4>
+                          <h4 className="font-semibold text-accent mb-1 text-xs">{t.projects.ourContribution}</h4>
                           <p className="text-foreground leading-relaxed text-sm italic">{project.ourContribution}</p>
                         </div>
                       )}

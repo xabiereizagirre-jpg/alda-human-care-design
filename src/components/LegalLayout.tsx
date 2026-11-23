@@ -1,0 +1,13 @@
+import type { ReactNode } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+const LegalLayout = ({ children }: { children: ReactNode }) => (
+  <div className="min-h-screen bg-background">
+    <Header />
+    <main className="container mx-auto px-4 py-24 max-w-4xl">{children}</main>
+    <Footer />
+  </div>
+);
+
+export default LegalLayout;

@@ -1,86 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Users, Cog, Target, Stethoscope, Lightbulb, Globe, Settings, Heart, Eye, Zap, Cpu } from "lucide-react";
 import servicesImage from "@/assets/services-design.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
+
+const areaIcons = [Building2, Users, Cog, Target];
+const keyServiceIcons = [Lightbulb, Globe, Stethoscope, Settings, Building2, Cpu];
+const pillarIcons = [Heart, Users, Eye, Zap];
 
 const Services = () => {
-  const areas = [
-    {
-      icon: Building2,
-      title: "Organización",
-      description: "Rediseño de estructuras y procesos organizacionales para optimizar el funcionamiento y la eficiencia."
-    },
-    {
-      icon: Users,
-      title: "Experiencia",
-      description: "Mejora de la experiencia de usuarios, pacientes y profesionales a través del diseño centrado en personas."
-    },
-    {
-      icon: Cog,
-      title: "Servicio",
-      description: "Diseño e implementación de servicios innovadores que respondan a las necesidades reales del sector."
-    },
-    {
-      icon: Target,
-      title: "Estrategia",
-      description: "Desarrollo de estrategias sostenibles y planes de transformación adaptados a cada contexto."
-    }
-  ];
-
-  const keyServices = [
-    {
-      icon: Lightbulb,
-      title: "Diseño de servicios",
-      description: "Creación de servicios centrados en las personas y adaptados al contexto sociosanitario."
-    },
-    {
-      icon: Globe,
-      title: "Innovación y gestión del cambio",
-      description: "Acompañamiento en procesos de transformación e implementación de innovaciones."
-    },
-    {
-      icon: Stethoscope,
-      title: "Consultoría de negocios",
-      description: "Asesoramiento estratégico para el desarrollo y crecimiento sostenible de organizaciones del sector sociosanitario."
-    },
-    {
-      icon: Settings,
-      title: "Oficina técnica",
-      description: "Soporte técnico especializado para proyectos complejos del ámbito sociosanitario."
-    },
-    {
-      icon: Building2,
-      title: "Interoperabilidad sociosanitaria",
-      description: "Soluciones para la integración, coordinación y comunicación entre sistemas y organizaciones."
-    },
-    {
-      icon: Cpu,
-      title: "Asesoramiento tecnológico",
-      description: "Asesoramos y apoyamos en el uso de tecnología según las necesidades del cliente y/o proyecto."
-    }
-  ];
-
-  const methodologyPillars = [
-    {
-      icon: Heart,
-      title: "Diseño centrado en las personas",
-      description: "Ponemos a las personas en el centro de cada decisión, considerando sus necesidades, emociones y experiencias."
-    },
-    {
-      icon: Users,
-      title: "Participación como motor de cambio",
-      description: "Involucramos activamente a todos los actores relevantes en el proceso de diseño y transformación."
-    },
-    {
-      icon: Eye,
-      title: "Mirada sistémica",
-      description: "Analizamos el contexto completo, considerando todas las interacciones y dependencias del sistema."
-    },
-    {
-      icon: Zap,
-      title: "Adaptabilidad y acompañamiento",
-      description: "Acompañamos durante todo el proceso, adaptándonos a las necesidades cambiantes de cada organización."
-    }
-  ];
+  const { t } = useLanguage();
+  const areas = t.services.areas.map((item, index) => ({ ...item, icon: areaIcons[index] }));
+  const keyServices = t.services.keyServices.map((item, index) => ({ ...item, icon: keyServiceIcons[index] }));
+  const methodologyPillars = t.services.pillars.map((item, index) => ({ ...item, icon: pillarIcons[index] }));
 
   return (
     <section id="services" className="py-20 bg-muted/20">
@@ -88,18 +19,17 @@ const Services = () => {
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">
-            Qué hacemos
+            {t.services.title}
           </h2>
           <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8">
-            Aplicamos diseño estratégico centrado en las personas, combinado con tecnología con sentido, 
-            para crear soluciones que realmente transformen las organizaciones del sector sociosanitario.
+            {t.services.intro}
           </p>
         </div>
 
         {/* Areas of action */}
         <div className="mb-16">
           <h3 className="text-2xl md:text-3xl font-semibold text-primary text-center mb-12">
-            Nuestras 4 áreas de actuación
+            {t.services.areasTitle}
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {areas.map((area, index) => (
@@ -121,28 +51,27 @@ const Services = () => {
         {/* Methodology and Approach */}
         <div className="mb-16 max-w-6xl mx-auto">
           <h3 className="text-2xl md:text-3xl font-semibold text-primary text-center mb-12">
-            Nuestro enfoque y metodología
+            {t.services.methodologyTitle}
           </h3>
           
           <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
             <div className="relative">
               <img 
                 src={servicesImage} 
-                alt="Metodología de diseño centrado en las personas"
+                alt={t.services.methodologyImageAlt}
                 className="w-full h-64 lg:h-80 object-cover rounded-lg shadow-soft"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-lg"></div>
             </div>
             <div className="bg-accent/5 border border-accent/20 rounded-lg p-8">
               <h4 className="text-2xl font-semibold text-primary mb-4">
-                Metodología A2U
+                {t.services.a2uTitle}
               </h4>
               <p className="text-lg text-foreground leading-relaxed mb-4">
-                Nuestra metodología propia basada en <span className="font-semibold text-primary">Human-Centered Design</span> aplicado 
-                específicamente al ámbito sociosanitario, adaptada a las particularidades y necesidades de este sector.
+                {t.services.a2uBefore}<span className="font-semibold text-primary">{t.services.a2uHighlight}</span>{t.services.a2uAfter}
               </p>
               <p className="text-foreground leading-relaxed">
-                Trabajamos desde cuatro pilares fundamentales que guían nuestra metodología y definen nuestra forma de entender la transformación organizacional.
+                {t.services.a2uPillarsText}
               </p>
             </div>
           </div>
@@ -169,7 +98,7 @@ const Services = () => {
         {/* Key services */}
         <div className="mb-16">
           <h3 className="text-2xl md:text-3xl font-semibold text-primary text-center mb-12">
-            Servicios clave
+            {t.services.keyServicesTitle}
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {keyServices.map((service, index) => (
@@ -194,7 +123,7 @@ const Services = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-primary/5 border-l-4 border-primary p-8 rounded-lg">
             <p className="text-xl text-foreground leading-relaxed italic text-center">
-              "No llevamos recetas. Escuchamos, analizamos y diseñamos procesos que respondan al propósito de cada organización."
+              {t.services.philosophy}
             </p>
           </div>
         </div>
